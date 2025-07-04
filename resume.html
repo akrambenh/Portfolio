@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Akram Benhebbadj</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 1rem;
+            position: relative;
+        }
+        .resume-container {
+            width: 900px;
+            height: 600px;
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .rectangle {
+            background-color: #1a1a1a;
+            border-radius: 24px;
+            padding: 20px;
+            color: #fff;
+            flex: 1;
+        }
+        .profile-column {
+            width: 30%;
+        }
+        .content-column {
+            width: 70%;
+        }
+        .image-rectangle {
+            background-size: cover;
+            background-position: center;
+            background-image: url('assets/me.JPG');
+        }
+        .info-rectangle h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+            padding: 10px;
+            border-radius: 24px;
+            text-align: left;
+            background-color: #1a1a1a;
+        }
+        .info-rectangle h2 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #666;
+            text-align: left;
+        }
+        .info-rectangle p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+        }
+        .info-rectangle .icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: flex-start;
+        }
+        .info-rectangle .icons i {
+            font-size: 18px;
+            color: #999;
+        }
+        .info-rectangle h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        .content-rectangle button {
+            background-color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            margin: 10px 0;
+        }
+        .content-rectangle h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        .content-rectangle h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+        .content-rectangle p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 10px;
+            color: #ccc;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            color: #1a1a1a;
+        }
+        .back-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">←</button>
+    <div class="resume-container">
+        <div class="column profile-column">
+            <div class="rectangle image-rectangle"></div>
+            <div class="rectangle info-rectangle">
+                <h1>Akram Benhebbadj</h1>
+                <h2>IT at IVPME</h2>
+                <p>Email: akram.forgh@gmail.com</p>
+                <div class="icons">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-xing"></i>
+                </div>
+                <h3>Languages</h3>
+                <p>English (Fluent)</p>
+                <p>French (Proficient)</p>
+                <p>Arabic</p>
+                <h3>Tech Stack</h3>
+                <p>Flutter</p>
+                <p>Python</p>
+                <p>Java</p>
+            </div>
+        </div>
+        <div class="column content-column">
+            <div class="rectangle content-rectangle">
+                <h2>Education</h2>
+                <h3>Baccalaureate in Mathematics</h3>
+                <p>Fatima Zahra High-School, Setif<br>2019 - 2022</p>
+                <h3>Master's degree in Computer Science</h3>
+                <p>University of Ferhat Abbas<br>2020 - 2025<br>Graduated with honors.</p>
+                <h2>Work Experience</h2>
+                <h3>IVPME</h3>
+                <p>IT<br>In charge of IT infrastructure and support, including design and development of different platforms.<br>February 2024 - Present</p>
+                <h3>Anis Plast</h3>
+                <p>Operator<br>Working on a semi-automatic bottle blowing machine.<br>December 2023 - February 2024</p>
+                <button onclick="window.location.href='https://drive.google.com/uc?export=download&id=1O-bN2Jy46RvGuFlzSK9Y_fOoaW1wTunW'">Download Resume</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
