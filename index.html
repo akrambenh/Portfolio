@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>Portfolio Template - Open source</title>
-    <meta name="title" content="Portfolio Template - Open source" />
+    <title>Akram Benhebbadj - Portfolio</title>
+    <meta name="title" content="Akram Benhebbadj - Portfolio" />
     <meta
       name="description"
       content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
@@ -88,23 +88,63 @@
   <body>
     <header id="hero">
       <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
+      <nav class="navbar"
+        style="
+          opacity: 0.9;
+          background: 
+            linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+            rgba(255, 255, 255, 0.25);
+          background-blend-mode: normal, normal, normal, normal, plus-lighter;
+          box-shadow: 
+            inset 0px 0px 16px 4px rgba(255, 255, 255, 0.15), 
+            0px 4px 20px 0px rgba(31, 38, 135, 0.1);
+          backdrop-filter: blur(4px);
+          height: 64px;
+          display: flex;
+          align-items: center;
+        ">
+        <div class="container" style="display: flex; justify-content: end;color: transparent;">
           <!-- Logo -->
-          <h1 id="logo">
+          <!-- <h1 id="logo">
             <a href="https://github.com/CommunityPro/portfolio-html"
               ><img src="./assets/logo.png" alt="Your Logo"
             /></a>
-          </h1>
+          </h1> -->
           <!-- Navbar links -->
-          <ul class="nav-menu">
+          <ul class="nav-menu" style="color: transparent;">
             <li><a class="nav-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" target="_blank">CONTACT</a></li>
             <li>
               <a
                 class="nav-link btn btn-primary"
                 href="resume.html"
-                >RESUME <i class="fas fa-arrow-right"></i
-              ></a>
+                style="
+                  color: white;
+                  border-radius: 20px;
+                  border: 1px solid rgba(255, 255, 255, 0.8);
+                  opacity: 0.9;
+                  background: 
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%),
+                    linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+                    rgba(255, 255, 255, 0.25);
+                  background-blend-mode: normal, normal, normal, normal, plus-lighter;
+                  box-shadow: 
+                    inset 0px 0px 16px 4px rgba(255, 255, 255, 0.15), 
+                    0px 4px 20px 0px rgba(31, 38, 135, 0.1);
+                  backdrop-filter: blur(4px);
+                  height: 48px;
+                  display: flex;
+                  align-items: center;
+                  padding: 0 16px;
+                  text-decoration: none;
+                "
+              >
+                RESUME <i class="fas fa-arrow-right"></i>
+              </a>
             </li>
 
             <!-- Toggle switch -->
@@ -145,7 +185,67 @@
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" class="btn btn-secondary" target="_blank">Connect With Me</a>
       </section>
     </header>
-
+    <!-- Tech Stack -->
+    <section id="Stack" class="project-container container">
+      <div class="division"></div>
+      <div class="rectangle" style="width: 75%;">
+        <div class="text-element">
+            Tech Stack
+        </div>
+        <div class="image-row" style="gap: 50px;">
+            <div class="image-container">
+                <img src="assets/python.png" alt="Image 1">
+                <span>Python</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/flutter.png" alt="Image 2">
+                <span>Flutter</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/firebase.png" alt="Image 3">
+                <span>Firebase</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/pytorch.png" alt="Image 4">
+                <span>PyTorch</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/java.png" alt="Image 5">
+                <span>Java</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/sql.png" alt="Image 5">
+                <span>SQL</span>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="project-container container" style="display: flex; justify-content: flex-end;">
+      <div class="rectangle" style="width: 70%;">
+        <div class="image-row" style="gap: 55px;">
+          <div class="image-container">
+              <img src="assets/ai.png" alt="Image 5">
+              <span>AI</span>
+          </div>
+          <div class="image-container">
+              <img src="assets/vision.png" alt="Image 1">
+              <span>Machine Vision</span>
+          </div>
+          <div class="image-container">
+              <img src="assets/uiux.png" alt="Image 2">
+              <span>UI/UX Design</span>
+          </div>
+          <div class="image-container" style="width: 20%;">
+              <img src="assets/problem_solving.png" alt="Image 3">
+              <span>Problem Solving</span>
+          </div>
+        </div>
+        <div class="text-element">
+            Skills
+        </div>
+      </div>
+    </section>
     <!-- Projects -->
     <section id="projects" class="project-container container">
       <div class="division"></div>
@@ -208,10 +308,17 @@
     </section>
     <section id="projects" class="project-container container">
       <div class="division"></div>
-      <div class="content-text">
-        <h2>Good Design Means Usable</h2>
-        <p>As Steve Jobs said, "Design is not just what it looks like and feels like. Design is how it works."</p>
+      <div class="content-text" style="width: 100%; height: 50%; padding: 20px; box-sizing: border-box;">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 20px; font-size: 24px; line-height: 1.5; margin: 0; height: 150px; font-family: 'neue-haas-grotesk-pro', sans-serif;">
+          <span style="max-width: 100%; font-weight: bold; font-size: 2rem;">Design is not just what it looks like and feels like.<br> Design is how it works.</span>
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="assets/quote-steve.png" alt="Steve Jobs" style="height: 150px; width: 100px; object-fit: cover;">
+            <span style="font-size: 18px; font-weight: normal; margin-top: 5px;">Steve Jobs</span>
+          </div>
+        </div>
       </div>
+
+
       <article class="project">
         <!-- Project 1 -->
         <div class="card" style="background: url('assets/ui/one.webp') center center; background-size: cover; width: 100%; height: 650px;">
