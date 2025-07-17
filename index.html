@@ -86,21 +86,30 @@
       <!-- Navbar -->
       <nav class="navbar"
         style="
-          opacity: 0.9;
-          background: 
-            linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-            linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%),
-            linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
-            linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-            rgba(255, 255, 255, 0.25);
-          background-blend-mode: normal, normal, normal, normal, plus-lighter;
-          box-shadow: 
-            inset 0px 0px 16px 4px rgba(255, 255, 255, 0.15), 
-            0px 4px 20px 0px rgba(31, 38, 135, 0.1);
-          backdrop-filter: blur(4px);
           height: 64px;
+          width: 100%;
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          padding: 0 24px;
+
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
+                      rgba(255, 255, 255, 0.5);
+          background-blend-mode: overlay;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+          box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05),
+                      0 4px 32px rgba(31, 38, 135, 0.15);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+
+          color: white;
+          font-size: 1rem;
+          z-index: 1000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          opacity: 1;
         ">
         <div class="container" style="display: flex; justify-content: end;color: transparent;">
           <!-- Logo -->
@@ -113,30 +122,31 @@
           <ul class="nav-menu" style="color: transparent;">
             <li><a class="nav-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" target="_blank">CONTACT</a></li>
             <li>
-              <a
+              <Button
+                id="openModalBtn"
+                type="button"
                 class="nav-link btn btn-primary"
-                href="resume.html"
+                data-bs-toggle="modal" 
+                data-bs-target="#resumeModal"
                 style="
-                  color: white;
-                  border-radius: 20px;
-                  border: 1px solid rgba(255, 255, 255, 0.8);
-                  opacity: 0.9;
-                  background: 
-                    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-                    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%),
-                    linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
-                    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-                    rgba(255, 255, 255, 0.25);
-                  background-blend-mode: normal, normal, normal, normal, plus-lighter;
-                  box-shadow: 
-                    inset 0px 0px 16px 4px rgba(255, 255, 255, 0.15), 
-                    0px 4px 20px 0px rgba(31, 38, 135, 0.1);
-                  backdrop-filter: blur(4px);
-                  height: 48px;
+                  color: black;
+                  border-radius: 16px;
+                  border: 1px solid rgba(255, 255, 255, 1);
+                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.005) 100%), rgba(255, 255, 255, 0.00005);
+                  background-blend-mode: overlay;
+                  backdrop-filter: blur(42px);
+                  -webkit-backdrop-filter: blur(42px);
+                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
+                              0 8px 24px rgba(0, 0, 0, 0.12);
+                  height: 40px;
+                  padding: 0 20px;
                   display: flex;
                   align-items: center;
-                  padding: 0 16px;
+                  justify-content: center;
+                  cursor: pointer;
+                  transition: all 0.25s ease;
                   text-decoration: none;
+                  outline: none;
                 "
               >
                 RESUME <i class="fas fa-arrow-right"></i>
@@ -160,7 +170,210 @@
           </div>
         </div>
       </nav>
+      
+      <div id="contactModal" class="modal">
+        <span class="close-button">&times;</span>
+        <style>
+          .resume-container {
+            width: 900px;
+            height: 600px;
+            display: flex;
+            margin-top: 5%;
+            gap: 20px;
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          .profile-column {
+            width: 30%;
+          }
+          .content-column {
+            width: 70%;
+          }
+          .image-rectangle {
+            background-size: cover;
+            background-position: center;
+            background-image: url('assets/me.JPG');
+          }
+          .rect {
+            background-color: #1a1a1a;
+            border-radius: 24px;
+            padding: 20px;
+            color: #fff;
+            flex: 1;
+          }
+          .info-rectangle h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+            text-align: left;
+          }
+          .info-rectangle h2 {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #fff;
+            text-align: left;
+          }
+          .info-rectangle p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #dbdbdb;
+            text-align: left;
+          }
+          .info-rectangle .icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: flex-start;
+          }
+          .info-rectangle .icons i {
+            font-size: 18px;
+            color: #999;
+          }
+          .info-rectangle h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            text-align: left;
+            color: #fff;
+          }
+          .content-rectangle button {
+            background-color: #dbdbdb;
+;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            margin: 10px 0;
+          }
+          .content-rectangle h2 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+          }
+          .content-rectangle h3 {
+            color: #fff;
+            font-size: 16px;
+            margin: 10px 0 5px;
+          }
+          .content-rectangle p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 10px;
+            color: #ccc;
+          }
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        </style>
 
+        <div class="resume-container">
+          <!-- LEFT COLUMN -->
+          <div class="column profile-column">
+            <div class="rect image-rectangle"></div>
+            <div class="rect info-rectangle" style="
+                  color: black;
+                  border-radius: 16px;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.005) 100%), rgba(255, 255, 255, 0.00005);
+                  background-blend-mode: overlay;
+                  backdrop-filter: blur(42px);
+                  -webkit-backdrop-filter: blur(42px);
+                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
+                              0 8px 24px rgba(0, 0, 0, 0.12);
+                ">
+              <h1>Akram Benhebbadj</h1>
+              <h2>IT at IVPME</h2>
+              <p>Email: akram.forgh@gmail.com</p>
+              <!-- <div class="icons">
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-xing"></i>
+              </div> -->
+              <h3>Languages</h3>
+              <p>English (Fluent)</p>
+              <p>French (Proficient)</p>
+              <p>Arabic</p>
+              <h3>Tech Stack</h3>
+              <p>Flutter</p>
+              <p>Python</p>
+              <p>Java</p>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="column content-column">
+            <div class="rect content-rectangle" style="
+                  color: black;
+                  border-radius: 16px;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.005) 100%), rgba(255, 255, 255, 0.00005);
+                  background-blend-mode: overlay;
+                  backdrop-filter: blur(24px);
+                  -webkit-backdrop-filter: blur(24px);
+                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
+                              0 8px 24px rgba(0, 0, 0, 0.12);
+                ">
+              <h2>Education</h2>
+              <h3>Baccalaureate in Mathematics</h3>
+              <p>Fatima Zahra High-School, Setif<br>2019 - 2022</p>
+              <h3>Master's degree in Computer Science</h3>
+              <p>University of Ferhat Abbas<br>2020 - 2025<br>Graduated with honors.</p>
+
+              <h2>Work Experience</h2>
+              <h3>IVPME</h3>
+              <p>IT<br>In charge of IT infrastructure and support, including design and development of different platforms.<br>February 2024 - Present</p>
+              <h3>Anis Plast</h3>
+              <p>Operator<br>Working on a semi-automatic bottle blowing machine.<br>December 2023 - February 2024</p>
+
+              <button 
+                style="color: white;
+                font-weight: 600;
+                  border-radius: 16px;
+                  border: 1px solid rgba(255, 255, 255, 1);
+                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%), rgba(255, 255, 255, 0.05);
+                  background-blend-mode: overlay;
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
+                              0 8px 24px rgba(0, 0, 0, 0.12);"
+                onclick="window.location.href='https://drive.google.com/uc?export=download&id=1O-bN2Jy46RvGuFlzSK9Y_fOoaW1wTunW'">Download Resume</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <script>
+  const modal = document.getElementById("contactModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const closeBtn = document.querySelector(".close-button");
+
+  openBtn.onclick = () => {
+    modal.style.display = "flex"; // use "flex" instead of "block"
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+      </script>
       <section class="header-container">
         <img
           class="profile-image"
@@ -315,26 +528,35 @@
       </div>
 
 
-      <article class="project">
-        <!-- Project 1 -->
-        <div class="card" style="background: url('assets/ui/one.webp') center center; background-size: cover; width: 100%; height: 650px; position: relative; overflow: hidden;">
-          <div class="hover-rectangle">
-              <span>Online shopping mobile app UI for high-tech and gadgets</span>
-          </div>
-      </div>
+      <article class="project" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+  <!-- Project 1 -->
+  <div class="card" style="background: url('assets/ui/one.webp') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
+    <div class="hover-rectangle">
+      <span>Online shopping app UI for high-tech and gadgets</span>
+    </div>
+  </div>
 
+  <!-- Project 2 -->
+  <div class="card" style="background: url('assets/ui/four.png') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
+    <div class="hover-rectangle">
+      <span>Online Ordering home-made food app UI</span>
+    </div>
+  </div>
 
-        <!-- Project 2 -->
-        <div class="card" style="background: url('assets/ui/four.png') center center; background-size: cover; width: 100%; height: 650px;">
-        </div>
-        <!-- Project 2 -->
-        <div class="card" style="background: url('assets/ui/two.webp') center center; background-size: cover; width: 100%; height: 650px;">
-        </div>
+  <!-- Project 3 -->
+  <div class="card" style="background: url('assets/ui/two.webp') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
+    <div class="hover-rectangle">
+      <span>Gym and fitness training program app UI</span>
+    </div>
+  </div>
 
-        <!-- Project 2 -->
-        <div class="card" style="background: url('assets/ui/three.png') center center; background-size: cover; width: 100%; height: 650px;">
-        </div>
-      </article>
+  <!-- Project 4 -->
+  <div class="card" style="background: url('assets/ui/three.png') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
+    <div class="hover-rectangle">
+      <span>Booking and ordering caterer services online app UI</span>
+    </div>
+  </div>
+</article>
     </section>
     <footer id="footer">
       <div class="container">

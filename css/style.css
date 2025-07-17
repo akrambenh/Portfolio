@@ -12,8 +12,8 @@
     --weight-semibold: 600;
     --weight-bold: 800;
     --width-small: 600px;
-    --width-medium: 1100px;
-    --width-large: 1300px;
+    --width-medium: 1300px;
+    --width-large: 1500px;
 }
 
 [data-theme="dark"] {
@@ -32,6 +32,77 @@ html {
     font-size: 100%;
     scroll-behavior: smooth;
 }
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  height: 85%;
+  max-width: 1080px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Close Button */
+.close-button {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Form Elements */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#contactModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Keeps it over the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional dimmed background */
+  z-index: 9999; /* Make sure it's above everything else */
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 .rectangle {
     width: 70%;
@@ -245,38 +316,33 @@ h1 {
     bottom: 0;
     left: 10%;
     width: 80%;
-    height: 65px; /* 10% of 650px */
+    height: 56px;
     color: white;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    opacity: 0.9;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
     background: 
-        linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
-        rgba(255, 255, 255, 0.25);
-    background-blend-mode: normal, normal, normal, normal, plus-lighter;
+        linear-gradient(135deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.005) 100%),
+        rgba(255, 255, 255, 0.00005);
+    background-blend-mode: overlay;
     box-shadow: 
-        inset 0px 0px 16px 4px rgba(255, 255, 255, 0.15), 
-        0px 4px 20px 0px rgba(31, 38, 135, 0.1);
-    backdrop-filter: blur(4px);
-    height: 48px;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    text-decoration: none;
+        inset 0 1px 2px rgba(255, 255, 255, 0.3),
+        0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(100%); /* Start below the card */
+    padding: 0 16px;
+    text-decoration: none;
+    transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 10; /* Ensure rectangle is above background */
+    z-index: 10;
 }
 
 .card:hover .hover-rectangle {
     transform: translateY(0); /* Slide up to bottom of card on hover */
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .hover-rectangle span {
