@@ -84,33 +84,7 @@
   <body>
     <header id="hero">
       <!-- Navbar -->
-      <nav class="navbar"
-        style="
-          height: 64px;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 0 24px;
-
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
-                      rgba(255, 255, 255, 0.5);
-          background-blend-mode: overlay;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-
-          box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05),
-                      0 4px 32px rgba(31, 38, 135, 0.15);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-
-          color: white;
-          font-size: 1rem;
-          z-index: 1000;
-          position: fixed;
-          top: 0;
-          left: 0;
-          opacity: 1;
-        ">
+      <nav class="navbar">
         <div class="container" style="display: flex; justify-content: end;color: transparent;">
           <!-- Logo -->
           <!-- <h1 id="logo">
@@ -120,37 +94,15 @@
           </h1> -->
           <!-- Navbar links -->
           <ul class="nav-menu" style="color: transparent;">
-            <li><a class="nav-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" target="_blank">CONTACT</a></li>
+            <li><a class="nav-link" href="https://wa.me/213794417042" target="_blank">CONTACT</a></li>
             <li>
-              <Button
+              <button
                 id="openModalBtn"
                 type="button"
-                class="nav-link btn btn-primary"
-                data-bs-toggle="modal" 
-                data-bs-target="#resumeModal"
-                style="
-                  color: black;
-                  border-radius: 16px;
-                  border: 1px solid rgba(255, 255, 255, 1);
-                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.005) 100%), rgba(255, 255, 255, 0.00005);
-                  background-blend-mode: overlay;
-                  backdrop-filter: blur(42px);
-                  -webkit-backdrop-filter: blur(42px);
-                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
-                              0 8px 24px rgba(0, 0, 0, 0.12);
-                  height: 40px;
-                  padding: 0 20px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                  transition: all 0.25s ease;
-                  text-decoration: none;
-                  outline: none;
-                "
+                class="nav-link btn btn-primary glass-btn"
               >
                 RESUME <i class="fas fa-arrow-right"></i>
-              </a>
+              </button>
             </li>
 
             <!-- Toggle switch -->
@@ -343,7 +295,7 @@
               <h3>Baccalaureate in Mathematics</h3>
               <p>Fatima Zahra High-School, Setif<br>2019 - 2022</p>
               <h3>Master's degree in Computer Science</h3>
-              <p>University of Ferhat Abbas<br>2020 - 2025<br>Graduated with honors.</p>
+              <p>University of Ferhat Abbas<br>2020 - 2025</p>
 
               <h2>Work Experience</h2>
               <h3>IVPME</h3>
@@ -351,22 +303,11 @@
               <h3>Anis Plast</h3>
               <p>Operator<br>Working on a semi-automatic bottle blowing machine.<br>December 2023 - February 2024</p>
 
-              <button 
-                style="color: white;
-                font-weight: 600;
-                  border-radius: 16px;
-                  border: 1px solid rgba(255, 255, 255, 1);
-                  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%), rgba(255, 255, 255, 0.05);
-                  background-blend-mode: overlay;
-                  backdrop-filter: blur(4px);
-                  -webkit-backdrop-filter: blur(4px);
-                  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05),
-                              0 8px 24px rgba(0, 0, 0, 0.12);"
+              <button class="btn btn-primary"
                 onclick="window.location.href='https://drive.google.com/uc?export=download&id=1O-bN2Jy46RvGuFlzSK9Y_fOoaW1wTunW'">Download Resume</button>
             </div>
           </div>
         </div>
-      </div>
       </div>
       <section class="header-container">
         <img
@@ -385,68 +326,98 @@
             desktop development, UI/UX and brand identity.
           </p>
         </div>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" class="btn btn-secondary" target="_blank">Connect With Me</a>
+        <a href="https://wa.me/213794417042" class="btn btn-primary" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Contact Me on WhatsApp
+        </a>
       </section>
     </header>
     <!-- Tech Stack -->
-     <section id="skills" style="margin-bottom: 16px; display: flex; justify-content: center; align-items: center;">
-  <div style="padding: 16px; background-color: white; width: 90%; border-radius: 24px; display: flex; flex-direction: column; align-items: center;">
-    <h1 style="color: black;">Tech Stack</h1>
-    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; width: 100%;">
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/python.png" alt="Python" style="width: 100px; height: auto;">
-        <span>Python</span>
+    <section id="tech-stack" class="section-glass fade-in">
+      <div class="section-inner">
+        <h1 class="section-title">Tech Stack</h1>
+        <p class="section-subtitle">Technologies I work with daily</p>
+        <div class="tech-grid stagger-children">
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/python.png" alt="Python">
+            </div>
+            <span>Python</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/flutter.png" alt="Flutter">
+            </div>
+            <span>Flutter</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/firebase.png" alt="Firebase">
+            </div>
+            <span>Firebase</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/pytorch.png" alt="PyTorch">
+            </div>
+            <span>PyTorch</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/sql.png" alt="SQL">
+            </div>
+            <span>SQL</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="assets/supabase.svg" alt="Supabase">
+            </div>
+            <span>Supabase</span>
+          </div>
+        </div>
       </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/flutter.png" alt="Flutter" style="width: 100px; height: auto;">
-        <span>Flutter</span>
-      </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/firebase.png" alt="Firebase" style="width: 100px; height: auto;">
-        <span>Firebase</span>
-      </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/pytorch.png" alt="PyTorch" style="width: 100px; height: auto;">
-        <span>PyTorch</span>
-      </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/sql.png" alt="SQL" style="width: 100px; height: auto;">
-        <span>SQL</span>
-      </div>
-
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="https://supabase.com/_next/image?url=https%3A%2F%2Ffrontend-assets.supabase.com%2Fwww%2Fa523211ab3a7%2F_next%2Fstatic%2Fmedia%2Flogo-preview.50e72501.jpg&w=3840&q=75" alt="SQL" style="width: 100px; height: auto;">
-        <span>Supabase</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- Skills -->
-    <section id="skills" style="margin-bottom: 16px; display: flex; justify-content: center; align-items: center;">
-  <div style="padding: 16px; background-color: white; width: 90%; border-radius: 24px; display: flex; flex-direction: column; align-items: center;">
-    <h1 style="color: black;">Skills</h1>
-    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; width: 100%;">
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/ai.png" alt="Image 5" style="width: 100px; height: auto;">
-        <span>AI</span>
+    <section id="skills" class="section-glass fade-in">
+      <div class="section-inner">
+        <h1 class="section-title">Skills</h1>
+        <p class="section-subtitle">Expertise across the full spectrum</p>
+        <div class="skills-grid stagger-children">
+          <div class="skill-item stagger-item">
+            <div class="skill-icon">
+              <img src="assets/ai.png" alt="AI">
+            </div>
+            <span class="skill-label">AI</span>
+            <span class="skill-desc">Deep learning & NLP</span>
+          </div>
+          <div class="skill-item stagger-item">
+            <div class="skill-icon">
+              <img src="assets/vision.png" alt="Machine Vision">
+            </div>
+            <span class="skill-label">Machine Vision</span>
+            <span class="skill-desc">Real-time inspection</span>
+          </div>
+          <div class="skill-item stagger-item">
+            <div class="skill-icon">
+              <img src="assets/uiux.png" alt="UI/UX Design">
+            </div>
+            <span class="skill-label">UI/UX Design</span>
+            <span class="skill-desc">Human-centered design</span>
+          </div>
+          <div class="skill-item stagger-item">
+            <div class="skill-icon">
+              <img src="assets/problem_solving.png" alt="Problem Solving">
+            </div>
+            <span class="skill-label">Problem Solving</span>
+            <span class="skill-desc">Critical & analytical</span>
+          </div>
+        </div>
       </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/vision.png" alt="Image 1" style="width: 100px; height: auto;">
-        <span>Machine Vision</span>
-      </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px;">
-        <img src="assets/uiux.png" alt="Image 2" style="width: 100px; height: auto;">
-        <span>UI/UX Design</span>
-      </div>
-      <div class="image-container" style="display: flex; flex-direction: column; align-items: center; margin: 10px; width: 20%;">
-        <img src="assets/problem_solving.png" alt="Image 3" style="width: 100px; height: auto;">
-        <span>Problem Solving</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- Projects -->
-    <section id="projects" class="project-container container">
+    <section id="projects" class="project-container container fade-in">
       <div class="division"></div>
       <div class="content-text">
         <h2>Projects</h2>
@@ -457,9 +428,9 @@
       <article class="project">
         <!-- Project 1 -->
         <div class="project-row">
-          <div class="card" style="background: url('assets/project/project-one.png') center center; background-size: cover; width: 100%; height: 345px;">
+          <div class="card fade-in-left" style="background: url('assets/project/project-one.png') center center / cover no-repeat; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
           </div>
-          <div class="content-column">
+          <div class="content-column fade-in-right">
             <h1>Azzel, Run & Bike</h1>
             <p>Made for runners, by a runner. This app helps you track your runs and bike rides with ease.</p>
             <div class="image-row">
@@ -471,7 +442,7 @@
 
         <!-- Project 2 -->
         <div class="project-row">
-          <div class="content-column">
+          <div class="content-column fade-in-left">
             <h1>LUCY's Vision Inspection System</h1>
             <p>An AI innovative industrial solution to detect defection in products in real-time speed, and it's called VisionSuite.              What's makes so great is its easy user experience that requires no skills and takes so little time.</p>
             <div class="image-row">
@@ -480,15 +451,15 @@
               <img src="assets/ai.png" alt="Project Two Image 2">
             </div>
           </div>
-          <div class="card" style="background: url('assets/project/project-two.png') center center; background-size: cover; width: 100%; height: 345px;">
+          <div class="card fade-in-right" style="background: url('assets/project/project-two.png') center center / cover no-repeat; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="project-row">
-          <div class="card" style="background: url('assets/project/project-three.png') center center; background-size: cover; width: 100%; height: 345px;">
+          <div class="card fade-in-left" style="background: url('assets/project/project-three.png') center center / cover no-repeat; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
           </div>
-          <div class="content-column">
+          <div class="content-column fade-in-right">
             <h1>Sportify</h1>
             <p>Sport hobbiests like to read and to exchange info with medicals and experts.
               This app lets users connect and share their knowledge and experiences.</p>
@@ -505,52 +476,85 @@
         target="_blank" >See More <i class="fas fa-arrow-right"></i
       ></a> -->
     </section>
-    <section id="projects" class="project-container container">
+    <section id="ui-designs" class="project-container container fade-in">
       <div class="division"></div>
-      <div class="content-text" style="width: 100%; height: 50%; padding: 20px; box-sizing: border-box;">
-        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 20px; font-size: 24px; line-height: 1.5; margin: 0; height: 150px; font-family: 'neue-haas-grotesk-pro', sans-serif;">
-          <span style="max-width: 100%; font-weight: bold; font-size: 2rem;">Design is not just what it looks like and feels like.<br> Design is how it works.</span>
+      <div class="content-text" style="width: 100%; padding: 20px; box-sizing: border-box;">
+        <div class="quote-section">
+          <span class="quote-text">Design is not just what it looks like and feels like.<br> Design is how it works.</span>
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="assets/quote-steve.png" alt="Steve Jobs" style="height: 150px; width: 100px; object-fit: cover;">
+            <img src="assets/quote-steve.png" alt="Steve Jobs" class="quote-author-img">
             <span style="font-size: 18px; font-weight: normal; margin-top: 5px;">Steve Jobs</span>
           </div>
         </div>
       </div>
 
 
-      <article class="project" style="display: flex; gap: 20px;">
-  <!-- Project 1 -->
-  <div class="card" style="background: url('assets/ui/one.webp') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
-    <div class="hover-rectangle">
-      <span>Online shopping app UI for high-tech and gadgets</span>
-    </div>
-  </div>
+      <article class="designs-list">
+        <!-- Design 1 - Image Left -->
+        <div class="design-row fade-in">
+          <img src="assets/ui/one.webp" alt="Online shopping app UI" class="design-image">
+          <div class="design-content">
+            <h2>Online Shopping App</h2>
+            <p class="design-tag">E-Commerce / UI Design</p>
+            <p>A high-end shopping experience designed for tech enthusiasts and gadget lovers. The interface features a dark, immersive product showcase with dynamic card layouts, smooth micro-interactions, and a streamlined checkout flow. Every element is crafted to make browsing feel effortless and premium.</p>
+            <div class="design-details">
+              <span><strong>Role:</strong> UI/UX Designer</span>
+              <span><strong>Tools:</strong> Figma · Prototyping</span>
+            </div>
+          </div>
+        </div>
 
-  <!-- Project 2 -->
-  <div class="card" style="background: url('assets/ui/four.png') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
-    <div class="hover-rectangle">
-      <span>Online Ordering home-made food app UI</span>
-    </div>
-  </div>
+        <!-- Design 2 - Image Right -->
+        <div class="design-row fade-in">
+          <div class="design-content">
+            <h2>Fare & Food — Food Ordering App</h2>
+            <p class="design-tag">Food Tech / UI Design</p>
+            <p>A warm and inviting platform for ordering homemade meals from local chefs. The UI emphasizes food photography with generous imagery, intuitive category navigation, and a personalized recommendation engine. The ordering flow is reduced to just a few taps, making it feel as smooth as ordering from a favorite restaurant.</p>
+            <div class="design-details">
+              <span><strong>Role:</strong> UI/UX Designer</span>
+              <span><strong>Tools:</strong> Figma · User Testing</span>
+            </div>
+          </div>
+          <img src="assets/ui/four.png" alt="Food ordering app UI" class="design-image">
+        </div>
 
-  <!-- Project 3 -->
-  <div class="card" style="background: url('assets/ui/two.webp') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
-    <div class="hover-rectangle">
-      <span>Gym and fitness training program app UI</span>
-    </div>
-  </div>
+        <!-- Design 3 - Image Left -->
+        <div class="design-row fade-in">
+          <img src="assets/ui/two.webp" alt="Gym fitness app UI" class="design-image">
+          <div class="design-content">
+            <h2>ExerGym — Fitness Training App</h2>
+            <p class="design-tag">Health & Fitness / UI Design</p>
+            <p>A bold and energetic fitness companion that turns workout planning into a visually engaging experience. The design uses vibrant gradients, progress rings, and a clear hierarchy to keep users motivated. Custom workout builders, exercise libraries, and real-time tracking are all seamlessly integrated.</p>
+            <div class="design-details">
+              <span><strong>Role:</strong> UI/UX Designer</span>
+              <span><strong>Tools:</strong> Figma · After Effects</span>
+            </div>
+          </div>
+        </div>
 
-  <!-- Project 4 -->
-  <div class="card" style="background: url('assets/ui/three.png') center center; background-size: cover; width: 100%; height: 350px; position: relative; overflow: hidden;">
-    <div class="hover-rectangle">
-      <span>Booking and ordering caterer services online app UI</span>
-    </div>
-  </div>
-</article>
+        <!-- Design 4 - Image Right -->
+        <div class="design-row fade-in">
+          <div class="design-content">
+            <h2>Wajbati — Caterer Booking Platform</h2>
+            <p class="design-tag">Services / UI Design</p>
+            <p>A sophisticated booking and ordering platform for caterer services. The clean, approachable design makes it easy for users to browse menus, compare packages, and secure bookings. Built with trust and clarity in mind — from transparent pricing previews to seamless calendar integration and instant confirmation flows.</p>
+            <div class="design-details">
+              <span><strong>Role:</strong> UI/UX Designer</span>
+              <span><strong>Tools:</strong> Figma · Prototyping</span>
+            </div>
+          </div>
+          <img src="assets/ui/three.png" alt="Caterer booking app UI" class="design-image">
+        </div>
+      </article>
     </section>
     <footer id="footer">
       <div class="container">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akram.forgh@gmail.com" target="_blank">akram.forgh@gmail.com</a>
+        <a href="https://wa.me/213794417042" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Connect on WhatsApp
+        </a>
         <!-- Social links -->
         <div class="social">
           <a href="#" target="_blank"
