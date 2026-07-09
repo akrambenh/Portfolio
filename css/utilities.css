@@ -87,14 +87,25 @@ h2::selection {
 
 .toggle-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+
+.toggle-icons .moon,
+.toggle-icons .sun {
+  position: absolute;
+  inset: 0;
 }
 
 .toggle-icons>img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  width: 30px;
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .moon {
