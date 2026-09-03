@@ -258,12 +258,6 @@ h2::selection {
 
 /* Hero responsive */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    padding: 0 1.5rem;
-    gap: 2rem;
-  }
-
   .hero-left {
     padding-right: 0;
     order: 2;
@@ -271,6 +265,7 @@ h2::selection {
 
   .hero-right {
     order: 1;
+    margin-top: 3rem;
   }
 
   .hero-photo-wrap {
@@ -280,6 +275,12 @@ h2::selection {
 
   .hero-name {
     font-size: clamp(2.5rem, 12vw, 5rem);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem;
+    gap: 1rem;
   }
 
   .hero-bottom {
