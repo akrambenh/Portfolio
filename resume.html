@@ -6,7 +6,7 @@
     <title>Resume - Akram Benhebbadj</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: black;
@@ -30,7 +30,7 @@
         }
         .rectangle {
             background-color: #1a1a1a;
-            border-radius: 24px;
+            border-radius: 0;
             padding: 20px;
             color: #fff;
             flex: 1;
@@ -51,7 +51,7 @@
             font-size: 24px;
             color: #fff;
             padding: 10px;
-            border-radius: 24px;
+            border-radius: 0;
             text-align: left;
             background-color: #1a1a1a;
         }
@@ -83,20 +83,26 @@
             text-align: left;
         }
         .content-rectangle button {
-            background-color: #fff;
+            background-color: #ff3330;
             border: none;
             padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 14px;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             cursor: pointer;
             display: block;
             margin: 10px 0;
+            color: #fff;
         }
         .content-rectangle h2 {
             font-size: 20px;
             margin-bottom: 15px;
-            border-bottom: 1px solid #333;
+            border-bottom: 2px solid #ff3330;
             padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         .content-rectangle h3 {
             font-size: 16px;
@@ -107,6 +113,23 @@
             line-height: 1.5;
             margin: 0 0 10px;
             color: #ccc;
+        }
+        .back-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: #ff3330;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .back-button:hover {
+            background: #cc2926;
         }
     </style>
 </head>
