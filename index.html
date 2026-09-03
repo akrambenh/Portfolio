@@ -240,12 +240,76 @@
           @media (max-width: 768px) {
             .resume-container {
               flex-direction: column;
-              width: 95%;
-              margin-top: 10%;
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+              max-height: 100%;
+              margin: 0;
+              border-radius: 0;
+              gap: 0;
             }
-            .profile-column,
+            .profile-column {
+              width: 100%;
+              gap: 0;
+            }
             .content-column {
               width: 100%;
+              gap: 0;
+            }
+            .image-rectangle {
+              display: none;
+            }
+            .profile-column .rect {
+              border-radius: 0;
+            }
+            .rect {
+              padding: 16px;
+            }
+            .info-rectangle h1 {
+              font-size: 20px;
+            }
+            .info-rectangle h2 {
+              font-size: 14px;
+            }
+            .info-rectangle p {
+              font-size: 13px;
+            }
+            .info-rectangle h3 {
+              font-size: 14px;
+            }
+            .content-rectangle {
+              padding: 16px;
+            }
+            .content-rectangle h2 {
+              font-size: 16px;
+              margin-bottom: 10px;
+            }
+            .content-rectangle h3 {
+              font-size: 14px;
+            }
+            .content-rectangle p {
+              font-size: 13px;
+            }
+            .content-rectangle button {
+              width: 100%;
+              text-align: center;
+              padding: 14px 20px;
+              font-size: 13px;
+            }
+            .close-button {
+              position: fixed;
+              top: 12px;
+              right: 16px;
+              z-index: 10001;
+              color: #fff;
+              font-size: 28px;
+              width: 36px;
+              height: 36px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: rgba(0,0,0,0.5);
+              cursor: pointer;
             }
           }
         </style>
@@ -301,7 +365,7 @@
               <p>Software Engineer<br>Design and development of different industrial platforms. In charge of IT infrastructure and support.<br>February 2024 - Present</p>
 
               <button class="btn btn-primary"
-                onclick="window.location.href='https://drive.google.com/uc?export=download&id=1O-bN2Jy46RvGuFlzSK9Y_fOoaW1wTunW'">Download Resume</button>
+                onclick="window.location.href='https://drive.google.com/uc?export=download&id=1SRtt2gHjln13Shk04FcqlVN22XEvo-Q0'">Download Resume</button>
             </div>
           </div>
         </div>
@@ -344,7 +408,7 @@
         <!-- Bottom bar -->
         <div class="hero-bottom">
           <div class="hero-bottom-left">
-            <p style="font-size: 1.2rem; color: #ffffff;">I love making great user experiences.</p>
+            <p style="font-size: 1rem; color: #ffffff; font-weight: bold;">I love making great user experiences.</p>
           </div>
           <div class="hero-bottom-center">
             <a href="https://wa.me/213794417042" class="btn btn-primary hero-cta" target="_blank">
@@ -359,7 +423,9 @@
       <div class="tech-stack-panel">
         <h1 class="section-title">Tech Stack</h1>
         <p class="section-subtitle">Technologies I work with daily</p>
-        <div class="tech-grid stagger-children">
+        <div class="tech-and-skills-row">
+          <div class="tech-grid-wrapper">
+            <div class="tech-grid stagger-children">
           <div class="tech-item stagger-item">
             <div class="tech-icon">
               <img src="assets/python.png" alt="Python">
@@ -392,9 +458,9 @@
           </div>
           <div class="tech-item stagger-item">
             <div class="tech-icon">
-              <img src="assets/sql.png" alt="SQL">
+              <img src="assets/sql.png" alt="PostgreSQL">
             </div>
-            <span>SQL</span>
+            <span>PostgreSQL</span>
           </div>
           <div class="tech-item stagger-item">
             <div class="tech-icon">
@@ -408,9 +474,33 @@
             </div>
             <span>Figma</span>
           </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+            </div>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+            </div>
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="https://cdn.simpleicons.org/swift" alt="Swift & Xcode">
+            </div>
+            <span>Swift & Xcode</span>
+          </div>
+          <div class="tech-item stagger-item">
+            <div class="tech-icon">
+              <img src="https://cdn.simpleicons.org/qt" alt="PySide QML">
+            </div>
+            <span>PySide QML</span>
+          </div>
         </div>
-      </div>
-      <div class="skills-panel">
+        </div>
+        <div class="skills-panel">
         <div class="skill-row">
           <div class="skill-icon-small">
             <img width="96" height="96" src="https://img.icons8.com/liquid-glass/96/bard.png" alt="AI Integration"/>
@@ -438,6 +528,7 @@
           </div>
           <span class="skill-label">Automation & Digital Transformation</span>
         </div>
+      </div>
       </div>
     </section>
     <!-- Projects -->

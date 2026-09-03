@@ -273,19 +273,31 @@ html {
 
 /* Combined tech stack + skills section */
 #tech-and-skills {
-    display: flex;
-    gap: 3rem;
     max-width: var(--width-medium);
     margin: 3rem auto 0;
     padding: 0 2rem;
 }
 
 .tech-stack-panel {
-    flex: 1.8;
+    width: 100%;
+}
+
+.tech-and-skills-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.tech-grid-wrapper {
+    flex: 1;
+}
+
+.tech-grid-wrapper .tech-grid {
+    width: 100%;
 }
 
 .skills-panel {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     background: var(--primary-color);
@@ -330,10 +342,10 @@ html {
 /* Tech stack grid - Swiss grid */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     background: rgba(128, 128, 128, 0.15);
     border: 1px solid rgba(128, 128, 128, 0.15);
 }
@@ -993,6 +1005,10 @@ h1 {
 .stagger-children.visible > .stagger-item:nth-child(6) { transition-delay: 0.25s; }
 .stagger-children.visible > .stagger-item:nth-child(7) { transition-delay: 0.3s; }
 .stagger-children.visible > .stagger-item:nth-child(8) { transition-delay: 0.35s; }
+.stagger-children.visible > .stagger-item:nth-child(9) { transition-delay: 0.4s; }
+.stagger-children.visible > .stagger-item:nth-child(10) { transition-delay: 0.45s; }
+.stagger-children.visible > .stagger-item:nth-child(11) { transition-delay: 0.5s; }
+.stagger-children.visible > .stagger-item:nth-child(12) { transition-delay: 0.55s; }
 
 /* Project card image sizing */
 .project-card-img {
@@ -1220,8 +1236,12 @@ h1 {
     }
 
     #tech-and-skills {
+        padding: 0 1rem;
+    }
+
+    .tech-and-skills-row {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .project-row {
@@ -1268,7 +1288,7 @@ h1 {
     }
 
     .tech-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .quote-section {
