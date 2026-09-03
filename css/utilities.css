@@ -115,6 +115,18 @@ h2::selection {
   overflow: hidden;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
 .hero-label {
   position: absolute;
   top: 100px;
@@ -258,6 +270,9 @@ h2::selection {
 
 /* Hero responsive */
 @media (max-width: 900px) {
+  .hero::before {
+    background-size: 60px 60px;
+  }
   .hero-left {
     padding-right: 0;
     order: 2;
